@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txt: UILabel!
+    @IBOutlet weak var txtField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        txtField.placeholder = "입력을 하세요"
+        txtField.clearButtonMode = UITextFieldViewMode.whileEditing //클리어 버튼
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func bt(_ sender: Any) {
+        txt.text = " Hello " + txtField.text!
+        txtField.text = ""
+        txtField.resignFirstResponder()
     }
-
-
 }
-

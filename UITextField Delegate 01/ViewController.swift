@@ -24,6 +24,6 @@ class ViewController: UIViewController {
     @IBAction func bt(_ sender: Any) {
         txt.text = " Hello " + txtField.text!
         txtField.text = ""
-        txtField.resignFirstResponder()
+        txtField.resignFirstResponder() //
     }
 }
